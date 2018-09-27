@@ -3,7 +3,7 @@ import bottle
 from bottle import run, debug, route, template, error, abort, static_file,redirect
 import urllib.request, json
 from collections import *
-import sys from argv
+from sys import argv
 
 with urllib.request.urlopen("https://apis.is/petrol") as url:
     petrol = json.loads(url.read().decode())
