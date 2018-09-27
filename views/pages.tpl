@@ -27,6 +27,6 @@
         &markers=color:blue%7Clabel:S%7C{{lst[a][4]['lat']}},{{lst[a][4]['lon']}}&
         %a+=1
     %end
-    "/>
+    &key=AIzaSyCZqxxgbzP9CKg6o5eSG3UjfxbbjXBUpp0"/>
     </div>
 </div>
