@@ -12,7 +12,7 @@ for i in petrol['results']:
     else:
         comp.append([i['company'],i['bensin95']])
     g=i['company']
-#print(comp[7][0])
+
 def finnaVerd(ll):
     out=[]
     for i in petrol['results']:
@@ -22,7 +22,7 @@ def finnaVerd(ll):
 gogn=[]
 for i in range(len(comp)):
     gogn.append(finnaVerd(comp[i][0]))
-#print(tst)
+
 j= petrol['timestampPriceCheck']
 j = j[:10]
 j = str(j)
@@ -41,18 +41,6 @@ def oneComp(id,ll):
             out.append([i['name'],i['bensin95'],i['diesel'],i['key'],i['geo']])
             b+=1
     return out
-"""lst=oneComp(2,comp)
-a=0
-for i in lst:
-    print(lst[a][4]['lat'])
-    print(lst[a][4]['lon'])
-    a+=1"""
-#print(oneComp(1,comp))
-#for i in petrol['results']:
-#    print(i['company'])
-#print(oneComp(6,comp))
-
-#print(j)
 
 
 
