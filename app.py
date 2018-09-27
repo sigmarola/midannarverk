@@ -1,5 +1,7 @@
+import bottle
 from bottle import run, debug, route, template, error, abort, static_file,redirect
 from dump import *
+import sys from argv
 """import urllib.request, json
 with urllib.request.urlopen("https://apis.is/petrol") as url:
     petrol = json.loads(url.read().decode())
@@ -32,5 +34,6 @@ def villa(error):
 def static_skra(skra):
     return static_file(skra, root='./public')
 
-run(debug=True, port='9000')
+#run(debug=True, port='9000')
+bottle.run(host='0.0.0.0', port=argv[1])
 
