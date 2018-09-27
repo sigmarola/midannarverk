@@ -1,9 +1,10 @@
 
 import bottle
 from bottle import run, debug, route, template, error, abort, static_file,redirect
-import sys from argv
-from collections import *
 import urllib.request, json
+from collections import *
+import sys from argv
+
 with urllib.request.urlopen("https://apis.is/petrol") as url:
     petrol = json.loads(url.read().decode())
 #telja bensinstoðvar
