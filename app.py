@@ -3,8 +3,9 @@ import bottle
 from bottle import run, debug, route, template, error, abort, static_file,redirect
 import urllib.request, json
 from collections import *
-from sys import argv
 from dump import *
+from sys import argv
+
 
 gogn = gogn
 @route('/')
