@@ -21,12 +21,12 @@
 % include('footer.tpl')
 
     </div>
-    <div class="nine columns">
-    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Iceland&scale=2&zoom=6&size=500x400&maptype=roadmap
-    %for i in lst:
-        &markers=color:blue%7Clabel:S%7C{{lst[a][4]['lat']}},{{lst[a][4]['lon']}}&
-        %a+=1
-    %end
-    &key=AIzaSyCZqxxgbzP9CKg6o5eSG3UjfxbbjXBUpp0"/>
+    <div class="nine columns fpos">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Iceland&scale=2&zoom=6&size=500x400&maptype=roadmap
+        %for i in lst:
+            &markers=color:blue%7Clabel:S%7C{{lst[a][4]['lat']}},{{lst[a][4]['lon']}}&
+            %a+=1
+        %end
+        &key=AIzaSyCZqxxgbzP9CKg6o5eSG3UjfxbbjXBUpp0"/>
     </div>
 </div>
