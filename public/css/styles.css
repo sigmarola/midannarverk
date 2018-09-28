@@ -28,6 +28,12 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.fpos {
+    position: fixed;
+    left: 20%;
+    top: 0px;
+    z-index: -1;
+}
 .container {
   position: relative;
   width: 100%;
