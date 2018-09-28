@@ -47,7 +47,7 @@ def oneComp(id,ll):
             b+=1
     return out
 #
-gogn = gogn
+
 @route('/')
 def redir():
     redirect('/home')
