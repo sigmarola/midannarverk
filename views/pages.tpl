@@ -1,8 +1,7 @@
-% include('header.tpl')
+% rebase('base.tpl')
 <h1>{{title}}</h1>
 <a href="/home">Til baka</a>
-<div class="row">
-
+<div>
     <div class="three columns" >
     <table>
     <th>Staðsetning</th>
@@ -18,15 +17,16 @@
     </table>
     <a href="/home">Til baka</a>
 
-% include('footer.tpl')
 
-    </div>
-    <div class="nine columns fpos">
-    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Iceland&scale=2&zoom=6&size=500x400&maptype=roadmap
-    %for i in lst:
-        &markers=color:blue%7Clabel:S%7C{{lst[a][4]['lat']}},{{lst[a][4]['lon']}}&
-        %a+=1
-    %end
-    &key=AIzaSyCZqxxgbzP9CKg6o5eSG3UjfxbbjXBUpp0"/>
-    </div>
+
+</div>
+<div class="nine columns fpos">
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=Iceland&scale=2&zoom=6&size=500x350&maptype=roadmap
+%for i in lst:
+    &markers=size:tiny%7Ccolor:0x5ca4fa%7C{{lst[a][4]['lat']}},{{lst[a][4]['lon']}}&
+    %a+=1
+%end
+&key=AIzaSyCZqxxgbzP9CKg6o5eSG3UjfxbbjXBUpp0"/>
+</div>
+
 </div>
