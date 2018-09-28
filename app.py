@@ -35,7 +35,7 @@ yr=''
 day=''
 mon=''
 yr,mon,day = j.split('-')
-j= '%s-%s-%s'%(yr,day,mon)
+j= 'Síðast uppfært: %s-%s-%s'%(yr,day,mon)
 
 def oneComp(id,ll):
     cid=comp[id][0]
@@ -64,7 +64,7 @@ def pages(id):
         abort(404)
 @error(404)
 def villa(error):
-    return template('villa.tpl',title='404')
+    return template('villa.tpl',title='404',time=None)
 
 @route('/static/<skra:path>')
 def static_skra(skra):
