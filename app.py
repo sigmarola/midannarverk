@@ -19,32 +19,26 @@ for i in petrol['results']:
     else:
         comp.append([i['company'],i['bensin95']])
     g=i['company']
+
 def finnaVerd(ll):
     out=[]
     for i in petrol['results']:
         if i['company'] == ll:
             out.append([i['company'],i['bensin95'],i['diesel']])
     return min(out)
+
 gogn=[]
 for i in range(len(comp)):
     gogn.append(finnaVerd(comp[i][0]))
-j= petrol['timestampPriceCheck']
-j = j[:10]
-j = str(j)
-yr=''
-day=''
-mon=''
-yr,mon,day = j.split('-')
+
+yr,mon,day = petrol['timestampPriceCheck'][:10].split('-')
 j= 'Síðast uppfært: %s-%s-%s'%(yr,day,mon)
 
 def oneComp(id,ll):
-    cid=comp[id][0]
     out=[]
-    b=0
     for i in petrol['results']:
-        if i['company']==cid:
-            out.append([i['name'],i['bensin95'],i['diesel'],i['key'],i['geo']])
-            b+=1
+        if i['company']==comp[id][0]:
+            out.append([i['name'],i['bensin95'],i['diesel'],i['geo']])
     return out
 #
 
