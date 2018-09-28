@@ -1,4 +1,4 @@
-% include('header.tpl')
+%rebase('base.tpl')
 <h1>{{title}}</h1>
 <table>
 <tr>
@@ -18,4 +18,4 @@
 
 
 
-%include('footer.tpl')
+
