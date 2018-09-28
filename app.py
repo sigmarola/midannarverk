@@ -6,7 +6,7 @@ from collections import *
 from sys import argv
 
 #
-import urllib.request, json
+
 with urllib.request.urlopen("https://apis.is/petrol") as url:
     petrol = json.loads(url.read().decode())
 
