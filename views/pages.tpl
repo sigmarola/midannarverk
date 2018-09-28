@@ -23,7 +23,7 @@
 <div class="nine columns fpos">
 <img src="https://maps.googleapis.com/maps/api/staticmap?center=Iceland&scale=2&zoom=6&size=500x350&maptype=roadmap
 %for i in lst:
-    &markers=size:tiny%7Ccolor:0x5ca4fa%7C{{lst[a][4]['lat']}},{{lst[a][4]['lon']}}&
+    &markers=size:tiny%7Ccolor:0x5ca4fa%7C{{lst[a][3]['lat']}},{{lst[a][3]['lon']}}&
     %a+=1
 %end
 &key=AIzaSyCZqxxgbzP9CKg6o5eSG3UjfxbbjXBUpp0"/>
