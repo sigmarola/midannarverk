@@ -31,8 +31,12 @@ gogn=[]
 for i in range(len(comp)):
     gogn.append(finnaVerd(comp[i][0]))
 
+m=['Janúar','Febrúar','Mars','Apríl','Maí','Júní','Júlí','Ágúúst','September','Október','Nóvember','Desember']
 yr,mon,day = petrol['timestampPriceCheck'][:10].split('-')
-j= 'Síðast uppfært: %s-%s-%s'%(yr,day,mon)
+mon=int(mon)
+day=int(day)
+j= 'Síðast uppfært: %s. %s, %s'%(day,m[mon-1],yr)
+
 
 def oneComp(id,ll):
     out=[]
@@ -51,9 +55,12 @@ def index():
 
 @route('/page/<id:int>')
 def pages(id):
+    t=0
+    for i in oneComp(id-1):
+        t+=1
     if id <= len(comp):
         staktComp=oneComp((id-1),comp)
-        return template('pages.tpl', id=id-1,title=gogn[id-1][0],time=j,lst=staktComp,a=0)
+        return template('pages.tpl', id=id-1,title=gogn[id-1][0],time=j,lst=staktComp,a=0,t=t)
     else:
         abort(404)
 @error(404)
