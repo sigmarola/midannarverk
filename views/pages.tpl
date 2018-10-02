@@ -1,5 +1,6 @@
 % rebase('base.tpl')
 <h1>{{title}}</h1>
+<p>Fjöldi Bensínstöðva: <b>{{t}}</b></p>
 <a href="/home">Til baka</a>
 <div>
     <div class="three columns" >
