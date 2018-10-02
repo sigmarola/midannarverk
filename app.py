@@ -37,8 +37,7 @@ mon=int(mon)
 day=int(day)
 j= 'Síðast uppfært: %s. %s, %s'%(day,m[mon-1],yr)
 
-
-def oneComp(id,ll):
+def oneComp(id):
     out=[]
     for i in petrol['results']:
         if i['company']==comp[id][0]:
@@ -59,7 +58,7 @@ def pages(id):
     for i in oneComp(id-1):
         t+=1
     if id <= len(comp):
-        staktComp=oneComp((id-1),comp)
+        staktComp=oneComp((id-1))
         return template('pages.tpl', id=id-1,title=gogn[id-1][0],time=j,lst=staktComp,a=0,t=t)
     else:
         abort(404)
