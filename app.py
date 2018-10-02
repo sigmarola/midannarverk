@@ -43,6 +43,12 @@ def oneComp(id):
         if i['company']==comp[id][0]:
             out.append([i['name'],i['bensin95'],i['diesel'],i['geo']])
     return out
+mm=min(comp, key=lambda x: x[1])
+def lattverd():
+    for i in comp:
+        if i == mm:
+            return i[0]
+
 #
 
 @route('/')
@@ -50,7 +56,8 @@ def redir():
     redirect('/home')
 @route('/home')
 def index():
-    return template('index.tpl', skra=gogn, title='Verðskrá', time=j,a=0)
+    lstvrd = lattverd()
+    return template('index.tpl', skra=gogn, title='Verðskrá', time=j,a=0,lv=lstvrd)
 
 @route('/page/<id:int>')
 def pages(id):
