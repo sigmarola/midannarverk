@@ -44,10 +44,12 @@ def oneComp(id):
             out.append([i['name'],i['bensin95'],i['diesel'],i['geo']])
     return out
 mm=min(comp, key=lambda x: x[1])
-def lattverd():
+def lattverd(slot):
+    out=[]
     for i in comp:
         if i == mm:
-            return i[0]
+            out.append([i[slot],i[0]])
+    return out
 
 #
 
