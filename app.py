@@ -58,8 +58,9 @@ def redir():
     redirect('/home')
 @route('/home')
 def index():
-    lstvrd = lattverd()
-    return template('index.tpl', skra=gogn, title='Verðskrá', time=j,a=0,lv=lstvrd)
+    lstvrd1 = lattverd(1)
+    lstvrd2 = lattverd(2)
+    return template('index.tpl', skra=gogn, title='Verðskrá', time=j,a=0,lv1=lstvrd1,lv2=lstvrd2)
 
 @route('/page/<id:int>')
 def pages(id):
