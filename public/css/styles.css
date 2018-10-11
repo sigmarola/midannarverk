@@ -1,3 +1,5 @@
+
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -30,18 +32,22 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .fpos {
     position: fixed;
-    left: 20%;
+    left: 29%;
     top: 0px;
     z-index: -1;
 }
-tr.latt {
+td.latt {
     background-color:#32d16c;
+    color:white;
 }
 tr.la {
     color:white;
 }
 a.la {
     color:white;
+}
+body{
+    background-color:#efefef;
 }
 .container {
   position: relative;
@@ -173,7 +179,7 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #235970; }
 a:hover {
   color: #0FA0CE; }
 
@@ -397,9 +403,10 @@ hr {
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-img{
-    float:left;
-}
+
+
+
+
 /* Self Clearing Goodness */
 .container:after,
 .row:after,
@@ -407,9 +414,7 @@ img{
   content: "";
   display: table;
   clear: both; }
-.divF{
-    float:left;
-}
+
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
