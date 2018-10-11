@@ -31,7 +31,7 @@ gogn=[]
 for i in range(len(comp)):
     gogn.append(finnaVerd(comp[i][0]))
 
-m=['Janúar','Febrúar','Mars','Apríl','Maí','Júní','Júlí','Ágúúst','September','Október','Nóvember','Desember']
+m=['Janúar','Febrúar','Mars','Apríl','Maí','Júní','Júlí','Ágúst','September','Október','Nóvember','Desember']
 yr,mon,day = petrol['timestampPriceCheck'][:10].split('-')
 mon=int(mon)
 day=int(day)
@@ -60,11 +60,12 @@ def redir():
 def index():
     lstvrd1 = lattverd(1)
     lstvrd2 = lattverd(2)
-    return template('index.tpl', skra=gogn, title='Verðskrá', time=j,a=0,lv1=lstvrd1,lv2=lstvrd2)
+    return template('index.tpl', skra=gogn, title='Verðskrá', time=j, a=1,lv1=lstvrd1,lv2=lstvrd2)
 
 @route('/page/<id:int>')
 def pages(id):
     t=0
+
     for i in oneComp(id-1):
         t+=1
     if id <= len(comp):
