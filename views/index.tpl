@@ -7,7 +7,6 @@
 <th>Fyrirtæki</th>
 <th>Bensín verð(ódýrast)</th>
 <th>Díesel verð(ódýrast)</th>
-
 </tr>
 %for i in skra:
     <tr>
@@ -22,11 +21,8 @@
     %else:
          <td>{{i[2]}}</td>
     %end
-%a+=1
-%end
-</tr>
+    </tr>
 %a+=1
 %end
 </table>
-
 
