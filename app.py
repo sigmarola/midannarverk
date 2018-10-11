@@ -17,14 +17,14 @@ for i in petrol['results']:
     if i['company'] == g:
         None
     else:
-        comp.append([i['company'],i['bensin95']])
+        comp.append([i['company'],round(i['bensin95']),round(i['diesel'])])
     g=i['company']
 
 def finnaVerd(ll):
     out=[]
     for i in petrol['results']:
         if i['company'] == ll:
-            out.append([i['company'],i['bensin95'],i['diesel']])
+            out.append([i['company'],round(i['bensin95']),round(i['diesel'])])
     return min(out)
 
 gogn=[]
@@ -41,14 +41,14 @@ def oneComp(id):
     out=[]
     for i in petrol['results']:
         if i['company']==comp[id][0]:
-            out.append([i['name'],i['bensin95'],i['diesel'],i['geo']])
+            out.append([i['name'],round(i['bensin95']),round(i['diesel']),i['geo']])
     return out
 mm=min(comp, key=lambda x: x[1])
 def lattverd(slot):
     out=[]
     for i in comp:
         if i == mm:
-            out.append([i[slot],i[0]])
+            out=i[slot]
     return out
 
 #
