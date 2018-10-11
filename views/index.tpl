@@ -5,10 +5,11 @@
 <th>Fyrirtæki</th>
 <th>Bensín verð(ódýrast)</th>
 <th>Díesel verð(ódýrast)</th>
-</tr>
 
+</tr>
 <tr>
 %for i in skra:
+
     <td><a href="/page/{{a}}">{{i[0]}}</a></td>
     %if i[1]==lv1:
          <td class="latt">{{i[1]}} kr.</td>
